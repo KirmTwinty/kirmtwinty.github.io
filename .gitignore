@@ -2,4 +2,4 @@ _site/
 .sass-cache/
 .jekyll-metadata
 *~
-/org/create-full-applications-in-matlab-with-emacs.org
+**/org/
