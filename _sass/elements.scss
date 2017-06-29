@@ -208,3 +208,9 @@ kbd {
     font-weight: 300;
     margin-bottom: 10px;
 }
+
+// Background canvas
+#particles-animation{
+    position:absolute;
+    background-color: $bodycolor;
+}
