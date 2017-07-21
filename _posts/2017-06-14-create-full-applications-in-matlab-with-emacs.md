@@ -20,4 +20,4 @@ there is a project for that (like always...).
 You can get it from MELPA: Otherwise you can still get the source at
 <https://sourceforge.net/p/matlab-emacs/src/ci/master/tree/>
 
-To configure
+To configure it, just go through the documentation
