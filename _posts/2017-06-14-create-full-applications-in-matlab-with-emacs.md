@@ -29,40 +29,38 @@ First configuration
 
 You can customize some basic properties in your .emacs file. Here is an
 example of the configuration in my .emacs. The
+
 <kbd>matlab-shell-command</kbd> 
+
 sets the path to the bin of your MATLAB installation, which enables you
 to configure the version of MATLAB you want to choose if you have
 multiple ones installed on your computer. You definitely want to add the
 "-nodesktop -nosplash" options to the
+
 <kbd>matlab-shell-command-switches</kbd> 
+
 variable. You may notice that I have also added the "-softwareopengl".
 You can do it if you have some issues for starting matlab with your
 graphic card.
 
 Finally, you can also add the
+
 <kbd>matlab-indent-function</kbd> and <kbd>matlab-change-current-directory</kbd> to <kbd>t</kbd>
 
 " so that when you run a script the current MATLAB directory is
 automatically changed and the indentation is enabled.
 
-``` {.elisp}
-  ;; This is for the manual installation
-  (add-to-list 'load-path "~/.emacs.d/include/matlab")
-  (load-library "matlab-load")
-  ;; Some customization for MATLAB installation
-  (setq matlab-shell-command "/usr/local/MATLAB/R2016b/bin/matlab")
-  (setq matlab-shell-command-switches (list "-softwareopengl -nodesktop -nosplash"))
-  (setq matlab-indent-function t)
-  (setq matlab-change-current-directory t)
-  ;; enable the matlab-mode for the .m files
-  (add-to-list
-  'auto-mode-alist
-  '("\\.m$" . matlab-mode))
-  ;; Enable CEDET
-  (matlab-cedet-setup)
-  ;; Add the bin to load-path so that you can get the functions on CEDET
-  (add-to-list 'load-path "/usr/local/MATLAB/R2016b/bin")
-  ;; Enable flycheck for MATLAB
-  (eval-after-load 'flycheck
-    '(require 'flycheck-matlab-mlint))
-```
+{% highlight lisp %} ;; This is for the manual installation (add-to-list
+'load-path "\~/.emacs.d/include/matlab") (load-library "matlab-load") ;;
+Some customization for MATLAB installation (setq matlab-shell-command
+"/usr/local/MATLAB/R2016b/bin/matlab") (setq
+matlab-shell-command-switches (list "-softwareopengl -nodesktop
+-nosplash")) (setq matlab-indent-function t) (setq
+matlab-change-current-directory t) ;; enable the matlab-mode for the .m
+files (add-to-list 'auto-mode-alist '("\
+.m\$" . matlab-mode)) ;; Enable CEDET (matlab-cedet-setup) ;; Add the
+bin to load-path so that you can get the functions on CEDET (add-to-list
+'load-path "/usr/local/MATLAB/R2016b/bin") ;; Enable flycheck for MATLAB
+(eval-after-load 'flycheck '(require 'flycheck-matlab-mlint))
+
+{% endhighlight %}
