@@ -47,15 +47,24 @@ Finally, you can also add the so that when you run a script the current
 MATLAB directory is automatically changed and the indentation is
 enabled.
 
-;; This is for the manual installation (add-to-list 'load-path
-"\~/.emacs.d/include/matlab") (load-library "matlab-load") ;; Some
-customization for MATLAB installation (setq matlab-shell-command
-"/usr/local/MATLAB/R2016b/bin/matlab") (setq
-matlab-shell-command-switches (list "-softwareopengl -nodesktop
--nosplash")) (setq matlab-indent-function t) (setq
-matlab-change-current-directory t) ;; enable the matlab-mode for the .m
-files (add-to-list 'auto-mode-alist '("\
-.m\$" . matlab-mode)) ;; Enable CEDET (matlab-cedet-setup) ;; Add the
-bin to load-path so that you can get the functions on CEDET (add-to-list
-'load-path "/usr/local/MATLAB/R2016b/bin") ;; Enable flycheck for MATLAB
-(eval-after-load 'flycheck '(require 'flycheck-matlab-mlint))
+<pre><code class="lisp">
+;; This is for the manual installation
+(add-to-list 'load-path "~/.emacs.d/include/matlab")
+(load-library "matlab-load")
+;; Some customization for MATLAB installation
+(setq matlab-shell-command "/usr/local/MATLAB/R2016b/bin/matlab")
+(setq matlab-shell-command-switches (list "-softwareopengl -nodesktop -nosplash"))
+(setq matlab-indent-function t)
+(setq matlab-change-current-directory t)
+;; enable the matlab-mode for the .m files
+(add-to-list
+'auto-mode-alist
+'("\\.m$" . matlab-mode))
+;; Enable CEDET
+(matlab-cedet-setup)
+;; Add the bin to load-path so that you can get the functions on CEDET
+(add-to-list 'load-path "/usr/local/MATLAB/R2016b/bin")
+;; Enable flycheck for MATLAB
+(eval-after-load 'flycheck
+  '(require 'flycheck-matlab-mlint))
+</code></pre>
