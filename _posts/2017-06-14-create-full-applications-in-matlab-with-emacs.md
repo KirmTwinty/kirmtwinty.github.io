@@ -17,7 +17,11 @@ Getting Matlab to work with Emacs
 First of all you will need to get Matlab inside Emacs. Happily for you,
 there is a project for that (like always...).
 
-You can get it from MELPA: Otherwise you can still get the source at
+You can get it from MELPA:
+
+<kbd>M-x</kbd><kbd>package-install</kbd><kbd>matlab-mode</kbd>
+
+Otherwise you can still get the source at
 <https://sourceforge.net/p/matlab-emacs/src/ci/master/tree/>
 
 To configure it, just go through the documentation
