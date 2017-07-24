@@ -4,8 +4,8 @@ categories: Matlab Emacs
 comments: true
 date: '2017-06-14 mer. 11:54'
 excerpt: |
-    "This is how I use Matlab and Emacs together everyday to get a similar
-    workflow as for other programming languages (C/C++, python etc.)."
+    This is how I use Matlab and Emacs together everyday to get a similar
+    workflow as for other programming languages (C/C++, python etc.).
 layout: post
 options: 'H:2 num:nil tags:nil toc:nil timestamps:t'
 startup: showall
