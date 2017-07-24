@@ -1,10 +1,9 @@
 ---
 author: kirm
 categories: Matlab Emacs
+comments: true
 date: '2017-06-14 mer. 11:54'
-description: |
-    This is how I use Matlab and Emacs together everyday to get a similar
-    workflow as for other programming languages (C/C++, python etc.).
+excerpt: "This is how I use Matlab and Emacs together everyday to get a similar workflow as for other programming languages (C/C++, python etc.)."
 layout: post
 options: 'H:2 num:nil tags:nil toc:nil timestamps:t'
 startup: showall
@@ -47,7 +46,7 @@ Finally, you can also add the so that when you run a script the current
 MATLAB directory is automatically changed and the indentation is
 enabled.
 
-<pre><code class="lisp">
+<pre><code class="scheme hljs">
 ;; This is for the manual installation
 (add-to-list 'load-path "~/.emacs.d/include/matlab")
 (load-library "matlab-load")
