@@ -3,7 +3,9 @@ author: kirm
 categories: Matlab Emacs
 comments: true
 date: '2017-06-14 mer. 11:54'
-excerpt: "This is how I use Matlab and Emacs together everyday to get a similar workflow as for other programming languages (C/C++, python etc.)."
+excerpt: |
+    "This is how I use Matlab and Emacs together everyday to get a similar
+    workflow as for other programming languages (C/C++, python etc.)."
 layout: post
 options: 'H:2 num:nil tags:nil toc:nil timestamps:t'
 startup: showall
@@ -56,14 +58,11 @@ enabled.
 (setq matlab-indent-function t)
 (setq matlab-change-current-directory t)
 ;; enable the matlab-mode for the .m files
-(add-to-list
-'auto-mode-alist
-'("\\.m$" . matlab-mode))
+(add-to-list 'auto-mode-alist '("\\.m$" . matlab-mode))
 ;; Enable CEDET
 (matlab-cedet-setup)
 ;; Add the bin to load-path so that you can get the functions on CEDET
 (add-to-list 'load-path "/usr/local/MATLAB/R2016b/bin")
 ;; Enable flycheck for MATLAB
-(eval-after-load 'flycheck
-  '(require 'flycheck-matlab-mlint))
+(eval-after-load 'flycheck '(require 'flycheck-matlab-mlint))
 </code></pre>
