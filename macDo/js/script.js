@@ -97,7 +97,7 @@ window.onload = function(){
 	    if(DB[item].section == sec){
 		
 		content+='<div class="view view-ninth" onclick="addItem(\''+DB[item].nom+'\','+DB[item].lipides+','+DB[item].glucides+','+DB[item].protides+','+DB[item].autres+','+DB[item].energie+')">';
-		content+='<img width="306px" height="134px" src="img/'+DB[item].image+'" onerror="if (this.src != \'error.jpg\') this.src = \'img/unknown.png\';" />';
+		content+='<img width="306px" height="134px" src="./img/'+DB[item].image+'" onerror="if (this.src != \'error.jpg\') this.src = \'img/unknown.png\';" />';
 		content+='<div class="mask mask-1"></div>';
 		content+='<div class="mask mask-2"></div>';
 		
