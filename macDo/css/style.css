@@ -1,0 +1,169 @@
+body{
+    background:#EFEFEF;
+	color: #333;
+	font-family: 'Oswald', Arial, sans-serif;
+	font-size: 13px;
+	margin: 0 auto;
+}
+h1{
+	margin-left:20px;
+}
+#energy{
+	z-index:1;
+	margin-left:20px;
+	margin-right:20px;
+	font-size:15px;
+	margin-top:10px;
+	padding:5px 8px;
+	background-color:#D4A190;
+	color:white;
+	font-weight:bold;
+	visibility:hidden;
+}
+#activity{
+	z-index:1;
+	margin-left:20px;
+	margin-right:20px;
+	font-size:15px;
+	padding:5px 8px;
+	background-color:#14A190;
+	color:white;
+	font-weight:bold;
+	visibility:hidden;
+}
+
+#activity_choice{
+    z-index:1;
+    margin-left:2px;
+    margin-right:2px;
+    font-size:14px;
+    padding:5px 8px;
+    font-weight:bold;
+}
+
+.container h1{
+	
+	clear: both; 
+	float: left; 
+	display: block; 
+	position: relative; 
+	width:100%;
+}
+.container{
+	position:relative;
+	margin-right:300px;
+}
+.left-pan{
+	padding:5px;
+	background-color:white;
+	top:0px;
+	height:100%;
+	position:fixed;
+	right:0px;
+	width:25%;
+}
+.left-pan canvas{
+	position:absolute;
+	bottom:10px;
+}
+.content ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+	text-align:left;
+	margin-left:50px;
+	color:white;
+}
+
+.content li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+ 
+.content li:before {
+	content: "■ "; 
+	font-family:"Arial Black";
+}
+.lipides-el{
+	color:#F7464A;
+}
+.glucides-el{
+	color:#46BFBD;
+}
+.protides-el{
+	color:#FDB45C;
+}
+.autres-el{
+	color:#949FB1;
+}
+.energie-el{
+	color:#eee;
+	display:inline-block;
+	position:absolute;
+	bottom:4px;
+	right:10px;
+}
+
+.swing li {
+	text-transform:capitalize;
+  list-style: none;
+  background: #d1703c;
+  color: #fff;
+  height: 0;
+  line-height: 2em;
+  margin: 0;
+  padding: 0 0.5em;
+  overflow: hidden;
+  width: 100%;
+  
+  opacity: 0;
+  transform: rotateX(-90deg);
+  transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+.swing li:hover{
+	cursor:pointer;
+	background: red;
+	text-decoration: line-through;
+}
+.swing  li.show {
+  height: 2em;
+  margin: 2px 0;
+  opacity: 1;
+  transform: none;
+  transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+.swing {
+	box-sizing:border-box;
+  perspective: 100px;
+  margin-right:20px;
+  max-height:40%;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+.swing::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.swing::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.swing::-webkit-scrollbar-thumb
+{
+	background-color: #FF5A5E;	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+

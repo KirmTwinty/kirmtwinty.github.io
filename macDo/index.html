@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Titre de la page</title>
+	<link rel="stylesheet" href="css/thumbnails.css">
+	<link rel="stylesheet" href="css/dropdown.css">
+	<link rel="stylesheet" href="css/cs-select.css">
+	<link rel="stylesheet" href="css/cs-skin-slide.css">
+	<link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+	<div class="container" id="container">
+
+	    <h1>Sandwichs</h1>
+	    <div class="view view-ninth" onclick="addItem(8.8,30,13,3.3)">
+		<img src="img/hamburger.png" />
+		<div class="mask mask-1"></div>
+		<div class="mask mask-2"></div>
+		<div class="content">
+		    <h2>Le Hamburger</h2>
+		    <ul>
+			<li class="lipides-el">Lipides : 8.8g</li>
+			<li class="glucides-el">Glucides : 30g</li>
+			<li class="protides-el">Protides : 13g</li>
+			<li class="autres-el">Autres : 3.3g</li>
+		    </ul>
+		</div>
+	    </div>
+	    <div class="view view-ninth">
+		<img src="img/cheeseburger.png" />
+		<div class="mask mask-1"></div>
+		<div class="mask mask-2"></div>
+		<div class="content">
+		    <h2>Cheeseburger</h2>
+		    <ul>
+			<li class="lipides-el">Lipides</li>
+			<li class="glucides-el">Glucides</li>
+			<li class="protides-el">Protides</li>
+			<li class="autres-el">Autres</li>
+		    </ul>
+		</div>
+	    </div>
+	</div>
+	<div class="left-pan">
+	    <h1>Commande</h1>
+	    <section id="activities">
+
+	    </section>
+	    <ul id="list" class="swing">
+	    </ul>
+	    <p id="energy"></p>
+	    <p id="activity"></p>
+
+	    <canvas id="myChart" width="25%" height="25%"></canvas>
+	</div>
+
+	<script src="js/ChartJS/Chart.js"></script>
+	<script src="js/script.js" charset="utf-8"></script>
+	<script type="text/javascript" src="database.json"></script>
+	<script src="js/classie.js"></script>
+	<script type="text/javascript" src="js/selectFX.js"></script>
+	<script>
+	 (function() {
+	     [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+		 new SelectFx(el);
+	     } );
+	 })();
+	</script>
+	<!--  http://www.regimesmaigrir.com/calories/calories-depensees-par-activite.php -->
+	<!-- <script type="text/javascript"> -->
+	<!-- 		(function() { -->
+	<!-- 			[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	 -->
+	<!-- 				new SelectFx(el, { -->
+	<!-- 					stickyPlaceholder: false, -->
+	<!-- 					onChange: function(val){ -->
+	<!-- 						document.querySelector('span.cs-placeholder').style.backgroundColor = val; -->
+	<!-- 					} -->
+	<!-- 				}); -->
+	<!-- 			} ); -->
+	<!-- 		})(); -->
+	<!-- 	</script> -->
+	
+    </body>
+
+</html>
